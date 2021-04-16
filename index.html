@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Mountains</title>
+      <link rel="icon" href="./assests/iconmonstr-weather-95.svg" />
+      <link rel="stylesheet" href="style.css" />
+   </head>
+
+   <body>
+      <div class="page2">
+         <div class="page2overlay page2">
+            <div class="text_wrap">
+               <h1>Discover The Mountains</h1>
+               <h6>Places where you have never been before</h6>
+            </div>
+            <div class="pics_wrapper">
+               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="arrow prev" onclick="slideAdd(1)">
+                  <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" />
+               </svg>
+               <div class="img-wrap">
+                  <div class="imgs_container">
+                     <!-- <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8bW91bnRhaW5zfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                        alt="" class="img"> -->
+                     <div class="img_cont">
+                        <img
+                           src="https://images.unsplash.com/photo-1519681393784-d120267933ba?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OXx8bW91bnRhaW5zfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                           alt=""
+                           class="img"
+                           data-num="-3"
+                        />
+                        <div class="bottom_txt">The Sky</div>
+                        <div class="holder"></div>
+                     </div>
+                     <div class="img_cont">
+                        <img
+                           src="https://images.unsplash.com/photo-1538947151057-dfe933d688d1?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTl8fG1vdW50YWluc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                           alt=""
+                           class="img"
+                           id="lastClone"
+                           data-num="-2"
+                        />
+                        <div class="bottom_txt">The Fog</div>
+                        <div class="holder"></div>
+                     </div>
+                     <div class="img_cont">
+                        <img
+                           src="https://images.unsplash.com/photo-1491904768633-2b7e3e7fede5?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8bW91bnRhaW5zfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                           alt=""
+                           class="img"
+                           data-num="-1"
+                        />
+                        <div class="bottom_txt">The Orange Mountain</div>
+                        <div class="holder"></div>
+                     </div>
+                     <div class="img_cont">
+                        <img
+                           src="https://images.unsplash.com/photo-1477346611705-65d1883cee1e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8bW91bnRhaW5zfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                           alt=""
+                           class="center_img img"
+                           data-num="0"
+                        />
+                        <div class="bottom_txt">The Red Mountain</div>
+                        <div class="holder"></div>
+                        <div class="outlay"></div>
+                     </div>
+                     <div class="img_cont">
+                        <img
+                           src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8bW91bnRhaW5zfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                           alt=""
+                           class="img"
+                           data-num="1"
+                        />
+                        <div class="bottom_txt">The Sea</div>
+                        <div class="holder"></div>
+                     </div>
+                     <div class="img_cont">
+                        <img
+                           src="https://images.unsplash.com/34/BA1yLjNnQCI1yisIZGEi_2013-07-16_1922_IMG_9873.jpg?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjN8fG1vdW50YWluc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                           alt=""
+                           class="img"
+                           id="firstClone"
+                           data-num="2"
+                        />
+                        <div class="bottom_txt">The Snowy Mountain</div>
+                        <div class="holder"></div>
+                     </div>
+                     <div class="img_cont">
+                        <img
+                           src="https://images.unsplash.com/photo-1434394354979-a235cd36269d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8bW91bnRhaW5zfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                           alt=""
+                           class="img"
+                           data-num="3"
+                        />
+                        <div class="bottom_txt">The Sunshine</div>
+                        <div class="holder"></div>
+                     </div>
+                     <!-- <img src="https://images.unsplash.com/photo-1491904768633-2b7e3e7fede5?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8bW91bnRhaW5zfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                        alt="" class="img"> -->
+                  </div>
+               </div>
+               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="arrow next" onclick="slideAdd(-1)">
+                  <path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z" />
+               </svg>
+            </div>
+         </div>
+      </div>
+      <script src="./main.js"></script>
+   </body>
+</html>

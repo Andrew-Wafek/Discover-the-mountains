@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;700;800&display=swap");
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: "Poppins", sans-serif;
+}
+
+html {
+   height: 100%;
+   /* background-image: url("./mountains2.jpg"); */
+   background-size: cover;
+   background-position-y: -70px;
+   background-repeat: no-repeat;
+   transition: all ease 0.4s 0s;
+}
+::-webkit-scrollbar {
+   display: none;
+}
+body {
+   height: 100%;
+   backdrop-filter: blur(10px);
+   transition: all ease 0.4s 0s;
+}
+.page2 {
+   width: 100%;
+   height: 100%;
+   background-color: red;
+   background: url(./assests/Cave\ of\ miracles.jfif);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   position: relative;
+
+   /* position: relative; */
+   /* top: 10% ; */
+   /* transform: translateY(-60px); */
+}
+
+.page2 .text_wrap {
+   width: 100%;
+   height: 40%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.text_wrap h1 {
+   font-family: "Montserrat", sans-serif;
+   font-size: 72px;
+   color: rgba(255, 255, 255, 0.3);
+}
+.text_wrap h6 {
+   font-family: "Montserrat", sans-serif;
+   font-weight: 200;
+   letter-spacing: 1px;
+   font-size: 20px;
+
+   color: rgba(255, 255, 255, 0.7);
+
+   margin-top: 30px;
+}
+
+.pics_wrapper {
+   /* display: flex;
+    justify-content: space-around;
+    align-items: center; */
+   display: grid;
+   place-items: center;
+   grid-template-columns: 40px 1fr 40px;
+
+   width: 100%;
+   height: 350px;
+
+   padding: 20px;
+   background-color: rgba(255, 255, 255, 0.3);
+
+   position: absolute;
+
+   bottom: 0;
+   overflow: hidden;
+   /* top: 50%; */
+   /* transform: translateY(-50%); */
+}
+
+.img-wrap {
+   width: 1250px;
+   height: 100%;
+   display: flex;
+   /* justify-content: center; */
+   align-items: center;
+   position: relative;
+   overflow: hidden;
+   /* transform: translateX(-350px); */
+   /* transition:1s ease; */
+}
+
+.imgs_container {
+   /* grid-column: 2/3; */
+   /* width: 50%; */
+   /* width: 25px; */
+   display: flex;
+   align-items: center;
+   /* justify-content: center; */
+   position: relative;
+
+   left: -800px;
+
+   transition: 0.4s ease;
+   /* overflow: hidden; */
+}
+
+.img {
+   background-size: cover;
+   background-position: center;
+
+   border-radius: 20px;
+   margin: 0 20px;
+
+   /* box-shadow:  2px 2px 20px rgba(41, 41, 41, 0.2); */
+
+   width: 350px;
+   height: 250px;
+
+   transition: 0.4s ease;
+
+   user-select: none;
+}
+
+.center_img {
+   /* width: 400px;
+    height: 300px; */
+   transform: scale(1.15);
+   margin: 0 45px;
+}
+
+.arrow {
+   width: 30px;
+   height: 30px;
+   opacity: 0.8;
+   transition: 0.2s ease;
+   cursor: pointer;
+   z-index: 3;
+   user-select: none;
+   /* overflow: hidden;
+    background: inherit; */
+
+   /* width: 100px; */
+
+   padding: 7px;
+   border-radius: 50%;
+   background-color: rgb(225, 225, 225);
+}
+.arrow:hover {
+   opacity: 1;
+}
+
+.img_cont {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   margin: 0 5px;
+
+   width: 100%;
+   height: 100%;
+}
+
+.bottom_txt {
+   position: absolute;
+   left: 40px;
+   bottom: -5px;
+   color: white;
+   /* font-size: 30px; */
+   transition: 0.2s ease-in-out;
+   pointer-events: none;
+   opacity: 0;
+   z-index: 4;
+   /* background-color: rgba(255, 255, 255, 0.1); */
+   /* width: 100%; */
+   /* padding-left: 20px; */
+   /* height: 100%; */
+}
+
+.img:hover + .bottom_txt {
+   bottom: 15px;
+   /* left: px; */
+   font-size: 25px;
+   opacity: 1;
+   /* color: coral; */
+}
+.center_img:hover + .bottom_txt {
+   font-size: 30px;
+   bottom: 15px;
+   opacity: 1;
+   /* font-weight: 600;
+    letter-spacing: 1px; */
+   /* color: coral; */
+}
+
+.holder {
+   /* display: none; */
+   position: absolute;
+
+   width: 350px;
+   height: 250px;
+   transform: scale(1.15);
+
+   border-radius: 20px;
+   background-color: rgba(255, 255, 255, 0.05);
+
+   z-index: 3;
+   pointer-events: none;
+
+   transition: 0.2s ease-in-out;
+   opacity: 0;
+}
+
+.center_img:hover ~ .holder {
+   display: block;
+
+   /* opacity for transition */
+   opacity: 1;
+
+   /* backdrop-filter: blur(5px); */
+   /* filter: invert(0.2); */
+}
+/* .center_img:hover {
+    filter: brightness(2);
+} */
+
+.outlay {
+   display: none;
+   position: absolute;
+   width: 100vw;
+   height: 100vh;
+
+   bottom: 50%;
+   background-color: rgba(255, 127, 80, 0.213);
+}
+
+/* fix: ::img Wrap  overflow hidden hinder the outlay fullheight */
+
+.page2overlay {
+   width: 100vw;
+   height: 100vh;
+
+   backdrop-filter: blur(10px) sepia(10) brightness(0.2);
+   backdrop-filter: blur(10px);
+   background: rgba(255, 255, 255, 0);
+}
